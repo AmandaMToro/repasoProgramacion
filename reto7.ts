@@ -1,15 +1,25 @@
 function nombres1 (todos:string[])
-{ 
-  let i=0;
-    while(i<todos.length)
+{   let empiezaPorM:Boolean = true;
+    let i=0;
+    while(i<todos.length && empiezaPorM === true)
     {
-        if(todos[i].charAt(0) === "M") 
+        if(todos[i][0] === "M") 
         {
-            i++
-            console.log(true);
-        }    
-    }
-    
+           empiezaPorM = false;
+       
+        }
+        else
+        {
+            i++;
+        }
+    }  
+        return empiezaPorM;
     
 }
-    nombres1(["Maria", "Marta", "Manuel"])
+  let primerArray :string[] = ["Maria", "Marta", "Manuel", "Amanda"];
+console.log(nombres1(primerArray));
+
+
+
+
+
